@@ -1,0 +1,153 @@
+﻿<Window x:Class="HomeWork16_05_19.WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HomeWork16_05_19.WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="653.312" Width="1097.478"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="DarkCyan">
+            <TextBox Name="cityNameTextBox" CaretBrush="DarkCyan" Background="DarkCyan" materialDesign:HintAssist.Hint="City Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="36" Margin="26,0,413.2,9.6" KeyDown="CityNameTextBoxKeyDown" />
+            <Button x:Name="searchButton" Style="{StaticResource MaterialDesignRaisedButton}"
+                    ToolTip="Resource name: MaterialDesignRaisedButton" Height="Auto" Margin="681,7,259,10" FontSize="24" Background="DarkCyan" Click="SearchButtonClick">
+                Search
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1" Name="cardsGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <materialDesign:Card Visibility="Hidden" Grid.Column="1" Margin="10 20 10 10" UniformCornerRadius="6">
+                <materialDesign:Card.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="DarkCyan"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </materialDesign:Card.Background>
+                <StackPanel Name="firstDayStackPanel">
+                    <Image Source="https://cdn.apixu.com/weather/64x64/day/389.png" Height="89" Margin="0,0,10,0"/>
+                    <TextBlock Text="Temperature(C): " Grid.Row="0" FontSize="20"/>
+                    <TextBlock Text="Humidity(%): " Grid.Row="1" FontSize="20"/>
+                    <TextBlock Text="Wind Speed(m/s): " Grid.Row="2" FontSize="20"/>
+                    <TextBlock Text="Date: " Grid.Row="3" FontSize="20"/>
+                    <TextBlock Text="Week Day: " Grid.Row="4" FontSize="20"/>
+                </StackPanel>
+            </materialDesign:Card>
+            <materialDesign:Card Visibility="Hidden" Grid.Column="3" Margin="10 20 10 10" UniformCornerRadius="6">
+                <materialDesign:Card.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="DarkCyan"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </materialDesign:Card.Background>
+                <StackPanel Name="secondDayStackPanel">
+                    <Image Source="https://cdn.apixu.com/weather/64x64/day/389.png" Height="89" Margin="0,0,10,0"/>
+                    <TextBlock Text="Temperature(C): " Grid.Row="0" FontSize="20"/>
+                    <TextBlock Text="Humidity(%): " Grid.Row="1" FontSize="20"/>
+                    <TextBlock Text="Wind Speed(m/s): " Grid.Row="2" FontSize="20"/>
+                    <TextBlock Text="Date: " Grid.Row="3" FontSize="20"/>
+                    <TextBlock Text="Week Day: " Grid.Row="4" FontSize="20"/>
+                </StackPanel>
+            </materialDesign:Card>
+            <materialDesign:Card Visibility="Hidden" Grid.Column="5" Margin="10 20 10 10" UniformCornerRadius="6">
+                <materialDesign:Card.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="DarkCyan"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </materialDesign:Card.Background>
+                <StackPanel Name="thirdDayStackPanel">
+                    <Image Source="https://cdn.apixu.com/weather/64x64/day/389.png" Height="89" Margin="0,0,10,0"/>
+                    <TextBlock Text="Temperature(C): " Grid.Row="0" FontSize="20"/>
+                    <TextBlock Text="Humidity(%): " Grid.Row="1" FontSize="20"/>
+                    <TextBlock Text="Wind Speed(m/s): " Grid.Row="2" FontSize="20"/>
+                    <TextBlock Text="Date: " Grid.Row="3" FontSize="20"/>
+                    <TextBlock Text="Week Day: " Grid.Row="4" FontSize="20"/>
+                </StackPanel>
+            </materialDesign:Card>
+            <materialDesign:Card Visibility="Hidden" Grid.Column="7" Margin="10 20 10 10" UniformCornerRadius="6">
+                <materialDesign:Card.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="DarkCyan"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </materialDesign:Card.Background>
+                <StackPanel Name="fourthDayStackPanel">
+                    <Image Source="https://cdn.apixu.com/weather/64x64/day/389.png" Height="89" Margin="0,0,10,0"/>
+                    <TextBlock Text="Temperature(C): " Grid.Row="0" FontSize="20"/>
+                    <TextBlock Text="Humidity(%): " Grid.Row="1" FontSize="20"/>
+                    <TextBlock Text="Wind Speed(m/s): " Grid.Row="2" FontSize="20"/>
+                    <TextBlock Text="Date: " Grid.Row="3" FontSize="20"/>
+                    <TextBlock Text="Week Day: " Grid.Row="4" FontSize="20"/>
+                </StackPanel>
+            </materialDesign:Card>
+
+            <materialDesign:Card Visibility="Hidden" Grid.Column="1" Grid.Row="1" Margin="10 20 10 10" UniformCornerRadius="6">
+                <materialDesign:Card.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="DarkCyan"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </materialDesign:Card.Background>
+                <StackPanel Name="fifthDaySatckPanel">
+                    <Image Source="https://cdn.apixu.com/weather/64x64/day/389.png" Height="89" Margin="0,0,10,0"/>
+                    <TextBlock Text="Temperature(C): " Grid.Row="0" FontSize="20"/>
+                    <TextBlock Text="Humidity(%): " Grid.Row="1" FontSize="20"/>
+                    <TextBlock Text="Wind Speed(m/s): " Grid.Row="2" FontSize="20"/>
+                    <TextBlock Text="Date: " Grid.Row="3" FontSize="20"/>
+                    <TextBlock Text="Week Day: " Grid.Row="4" FontSize="20"/>
+                </StackPanel>
+            </materialDesign:Card>
+            <materialDesign:Card Visibility="Hidden" Grid.Column="3" Grid.Row="1" Margin="10 20 10 10" UniformCornerRadius="6">
+                <materialDesign:Card.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="DarkCyan"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </materialDesign:Card.Background>
+                <StackPanel Name="sixthDayStackPanel">
+                    <Image Source="https://cdn.apixu.com/weather/64x64/day/389.png" Height="89" Margin="0,0,10,0"/>
+                    <TextBlock Text="Temperature(C): " Grid.Row="0" FontSize="20"/>
+                    <TextBlock Text="Humidity(%): " Grid.Row="1" FontSize="20"/>
+                    <TextBlock Text="Wind Speed(m/s): " Grid.Row="2" FontSize="20"/>
+                    <TextBlock Text="Date: " Grid.Row="3" FontSize="20"/>
+                    <TextBlock Text="Week Day: " Grid.Row="4" FontSize="20"/>
+                </StackPanel>
+            </materialDesign:Card>
+            <materialDesign:Card Visibility="Hidden" Grid.Column="5" Grid.Row="1" Margin="10 20 10 10" UniformCornerRadius="6">
+                <materialDesign:Card.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="DarkCyan"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </materialDesign:Card.Background>
+                <StackPanel Name="sevethDayStackPanel">
+                    <Image Source="https://cdn.apixu.com/weather/64x64/day/389.png" Height="89" Margin="0,0,10,0"/>
+                    <TextBlock Text="Temperature(C): " Grid.Row="0" FontSize="20"/>
+                    <TextBlock Text="Humidity(%): " Grid.Row="1" FontSize="20"/>
+                    <TextBlock Text="Wind Speed(m/s): " Grid.Row="2" FontSize="20"/>
+                    <TextBlock Text="Date: " Grid.Row="3" FontSize="20"/>
+                    <TextBlock Text="Week Day: " Grid.Row="4" FontSize="20"/>
+                </StackPanel>
+            </materialDesign:Card>
+        </Grid>
+    </Grid>
+</Window>
