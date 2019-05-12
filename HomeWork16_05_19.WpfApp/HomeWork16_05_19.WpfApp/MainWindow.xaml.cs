@@ -47,11 +47,11 @@ namespace HomeWork16_05_19.WpfApp
                     var textBlocks = stackPanel.Children.OfType<TextBlock>().ToList();
                     var image = stackPanel.Children.OfType<Image>().SingleOrDefault();
                     image.Source = new ImageSourceConverter().ConvertFromString($"https:{forecast.Forecastday[i].Day.Condition.Icon}") as ImageSource;
-                    textBlocks[0].Text = $"Temperature(C): {forecast.Forecastday[i].Day.AvgtempC}";
-                    textBlocks[1].Text = $"Humidity(%): {forecast.Forecastday[i].Day.Avghumidity}";
-                    textBlocks[2].Text = $"Wind Speed(m/s): {forecast.Forecastday[i].Day.AvgvisKm / 3.6}";
-                    textBlocks[3].Text = $"Date: {forecast.Forecastday[i].Date}";
-                    textBlocks[4].Text = $"Week Day: {forecastDay.DayOfWeek}";
+                    textBlocks[Constants.TEMPERATURE_ELEMENT_INDEX].Text = $"Temperature(C): {forecast.Forecastday[i].Day.AvgtempC}";
+                    textBlocks[Constants.HUMIDITY_ELEMENT_INDEX].Text = $"Humidity(%): {forecast.Forecastday[i].Day.Avghumidity}";
+                    textBlocks[Constants.WIND_SPEED_ELEMENT_INDEX].Text = $"Wind Speed(m/s): {forecast.Forecastday[i].Day.AvgvisKm / 3.6}";
+                    textBlocks[Constants.DATE_ELEMENT_INDEX].Text = $"Date: {forecast.Forecastday[i].Date}";
+                    textBlocks[Constants.WEEK_DAY_ELEMENT_INDEX].Text = $"Week Day: {forecastDay.DayOfWeek}";
                     cards[i].Visibility = Visibility.Visible;
                 }
             }
@@ -89,11 +89,11 @@ namespace HomeWork16_05_19.WpfApp
                         var textBlocks = stackPanel.Children.OfType<TextBlock>().ToList();
                         var image = stackPanel.Children.OfType<Image>().SingleOrDefault();
                         image.Source = new ImageSourceConverter().ConvertFromString($"https:{forecast.Forecastday[i].Day.Condition.Icon}") as ImageSource;
-                        textBlocks[0].Text = $"Temperature(C): {forecast.Forecastday[i].Day.AvgtempC}";
-                        textBlocks[1].Text = $"Humidity(%): {forecast.Forecastday[i].Day.Avghumidity}";
-                        textBlocks[2].Text = $"Wind Speed(m/s): {forecast.Forecastday[i].Day.AvgvisKm / 3.6}";
-                        textBlocks[3].Text = $"Date: {forecast.Forecastday[i].Date}";
-                        textBlocks[4].Text = $"Week Day: {forecastDay.DayOfWeek}";
+                        textBlocks[Constants.TEMPERATURE_ELEMENT_INDEX].Text = $"Temperature(C): {forecast.Forecastday[i].Day.AvgtempC}";
+                        textBlocks[Constants.HUMIDITY_ELEMENT_INDEX].Text = $"Humidity(%): {forecast.Forecastday[i].Day.Avghumidity}";
+                        textBlocks[Constants.WIND_SPEED_ELEMENT_INDEX].Text = $"Wind Speed(m/s): {forecast.Forecastday[i].Day.AvgvisKm / 3.6}";
+                        textBlocks[Constants.DATE_ELEMENT_INDEX].Text = $"Date: {forecast.Forecastday[i].Date}";
+                        textBlocks[Constants.WEEK_DAY_ELEMENT_INDEX].Text = $"Week Day: {forecastDay.DayOfWeek}";
                         cards[i].Visibility = Visibility.Visible;
                     }
                 }

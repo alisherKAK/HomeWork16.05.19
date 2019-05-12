@@ -13,7 +13,7 @@
             <RowDefinition Height="40*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Background="DarkCyan">
-            <TextBox Name="cityNameTextBox" CaretBrush="DarkCyan" Background="DarkCyan" materialDesign:HintAssist.Hint="City Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="36" Margin="26,0,413.2,9.6" KeyDown="CityNameTextBoxKeyDown" />
+            <TextBox Name="cityNameTextBox" CaretBrush="DarkCyan" Background="DarkCyan" materialDesign:HintAssist.Hint="City Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="30" Margin="26,0,413.2,9.6" KeyDown="CityNameTextBoxKeyDown" />
             <Button x:Name="searchButton" Style="{StaticResource MaterialDesignRaisedButton}"
                     ToolTip="Resource name: MaterialDesignRaisedButton" Height="Auto" Margin="681,7,259,10" FontSize="24" Background="DarkCyan" Click="SearchButtonClick">
                 Search
